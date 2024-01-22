@@ -1,0 +1,100 @@
+{% extends "common.html" %}
+{% block page %}
+  <br>
+  <br>
+  <br>
+
+<div class="container">
+  <form action="/putinmodel" method="POST">
+      <h3>Give the following details:</h3>
+    <hr>
+
+    <div class="row">
+        <div class="bala col-md-offset-4">
+            <label for="age">Your Age</label>
+            <input class="form-control input-sm" type="number" min="0" required="required" name="age">
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="cp" class="form-label">Your Chest Pain Type</label>
+            <select class="form-control" id="cp" name="cp" required="required" >
+                <option value="0">Typical Angina</option>
+                <option value="1">Atypical Angina</option>
+                <option value="2">Non-Anginal Pain</option>
+                <option value="3">Asymptomatic</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4 ">
+            <label for="Gender" class="form-label">Gender</label>
+            <select class="form-control" id="Gender" name="Gender" required="required" >
+                <option value="1">male</option>
+                <option value="0">female</option>
+            </select>
+        </div>
+
+
+        <div class="bala col-md-offset-4">
+            <label for="chol" class="form-label">What is Serum Cholestoral in mg/dl</label>
+            <input class="form-control" type="number" min="0" step="any" id="chol" name="chol" required="required" >
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="trestbps" class="form-label">What is Resting Blood Pressure </label>
+            <input class="form-control" type="number" min="0" id="trestbps" name="trestbps" required="required" placeholder="(in mm Hg)" >
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="restecg" class="form-label">What is Resting Electro-cardiographic Result</label>
+            <select class="form-control" type="number" id="restecg" name="restecg" required="required" >
+                <option value="0">Normal</option>
+                <option value="1">having ST-T wave abnormality</option>
+                <option value="2">showing probable or definite left ventricular hypertrophy</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="fbs" class="form-label">Is your Fasting Blood Sugar > 120 mg/dl</label>
+            <select class="form-control" id="fbs" name="fbs" required="required" >
+                <option value="0">no</option>
+                <option value="1">yes</option>
+            </select>
+
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="exang" class="form-label">Do you have Exercise Induced Angina</label>
+            <select class="form-control" id="exang" name="exang" required="required">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="thalach" class="form-label">What is Maximum Heart Rate Achieved</label>
+            <input class="form-control" type="number" min="0" step="any" id="thalach" name="thalach" required="required">
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="slope" class="form-label">What is the slope of the peak exercise ST segment</label>
+            <select class="form-control" type="number" min="0" id="slope" name="slope" required="required" >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="oldpeak" class="form-label">What is ST depression induced by exercise relative to rest</label>
+            <input class="form-control" type="number" min="0" step="any" id="oldpeak" name="oldpeak" required="required" placeholder="oldpeak">
+        </div>
+
+    </div>
+           
+    <br>
+    <br>
+    <br>
+    <div class="bala bbn text-center">
+         <button type="submit" class="btn btn-success" value="submit">PREDICT DISEASE</button>
+    </div>
+
+    
+</form>
+</div>
+<br>
+<br>
+<br>
+
+{% endblock %}

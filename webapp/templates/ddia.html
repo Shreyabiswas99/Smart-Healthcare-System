@@ -1,0 +1,73 @@
+{% extends "common.html" %}
+{% block page %}
+  <br>
+  <br>
+  <br>
+
+
+<div class="container">
+  <form action="/putinmodel" method="POST">
+    <h3>Give the following details:</h3>
+    <hr>
+
+    <div class="row">
+        <div class="bala col-md-offset-4">
+            <label for="Pregnancies">Pregnancies:</label>
+            <input class="form-control" type="number" min="0" required="required" name="pregnancies">
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="BloodPressure">BloodPressure : </label>
+            <input class="form-control" type="number" min="0" step="any" id="blood_pressure" name="blood_pressure" required="required">
+        </div>
+        <div class="bala col-md-offset-4 ">
+            <label for="Glucose">Glucose : </label>
+            <input class="form-control" type="number" min="0" id="Glucose" step="0.001" name="Glucose" required="required">
+        </div>
+
+        
+        <div class="bala col-md-offset-4">
+            <label for="SkinThickness">Triceps skin fold thickness (mm): </label>
+            <input class="form-control" type="number" min="0" id="SkinThickness" step="any" name="BSkinThickness" required="required" placeholder="in mm">
+        </div>
+
+        <div class="bala col-md-offset-4">
+            <label for="BMI">Body mass index : </label>
+            <input class="form-control" required="required" step="any" type="number" min="0" id="BMI" name="BMI">
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="Insulin">Insulin : </label>
+            <input class="form-control" required="required" step="any" type="number" min="0" id="Insulin" name="Insulin" placeholder="in mu U/ml">
+
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction : </label>
+            <input class="form-control" required="required" step="any" type="number" min="0" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction">
+
+        </div>
+        
+
+        <div class="bala col-md-offset-4">
+            <label for="Age">Age : </label>
+            <input class="form-control" required="required" type="number" min="0" id="Age" name="Age">
+
+        </div>
+    </div>
+           
+    <br>
+    <br>
+    <br>
+
+    <div class="bala bbn text-center">
+         <button type="submit" class="btn btn-success" value="submit">PREDICT DISEASE</button>
+    </div>
+   
+    
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+

@@ -1,0 +1,120 @@
+{% extends "common.html" %}
+{% block page %}
+  <br>
+  <br>
+  <br>
+
+<div class="container">
+  <form action="/putinmodel" method="POST">
+      <h3>Give the following details:</h3>
+    <hr>
+
+    <div class="row">
+        <div class="bala col-md-offset-4">
+            <label for="age">Your Age</label>
+            <input class="form-control input-sm" type="number" min="0" required="required" name="age">
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="al">what is Specific Gravity</label>
+            <input class="form-control" type="number" min="0" id="Specific_Gravity" step="0.001" name="Specific_Gravity"  required="required">
+        </div>
+        <div class="bala col-md-offset-4 ">
+
+            <label for="bp">What is blood pressure</label>
+            <input class="form-control" type="number" min="0" step="0.001" id="blood_pressure" name="blood_pressure"  required="required">
+        </div>
+
+        <div class="bala col-md-offset-4">
+            <label for="sc">Blood Urea count </label>
+            <input class="form-control" required="required" step="0.01" type="number" min="0" id="Blood_Urea" name="Blood_Urea" >
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="bu">what is Blood Glucose level</label>
+            <input class="form-control" type="number" min="0" id="Blood_Glucose_Random" step="0.001" name="Blood_Glucose_Random" required="required" >
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="pcv">what is Hemoglobin </label>
+            <input class="form-control" required="required" step="0.001" type="number" min="0" id="Hemoglobin" name="Hemoglobin" >
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="hemo">What is Serum Creatinine </label>
+            <input class="form-control" required="required" step="0.001" type="number" min="0" id="Serum_Creatinine" name="Serum_Creatinine" >
+
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="dm">Bacteria</label>
+            <select class="form-control" id="Bacteria" name="Bacteria" required="required" >
+                <option value="0">notpresent</option>
+                <option value="1">present</option>
+            </select>
+
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="htn">What is Cell Clumps</label>
+            <select class="form-control" id="Pus Cell Clumps" name="Pus Cell Clumps" min="0" required="required" >
+                <option value="0">notpresent</option>
+                <option value="1">present</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="appet">What is Diabetes Mellitus </label>
+            <select class="form-control" id="Diabetes Mellitus" name="Diabetes Mellitus" required="required" >
+                <option value="0">no</option>
+                <option value="1">yes</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="appet">Hypertension</label>
+            <select class="form-control" id="Hypertension" name="Hypertension" required="required">
+                <option value="0">no</option>
+                <option value="1">yes</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="appet">Appetite level</label>
+            <select class="form-control" id="Appetite" name="Appetite" required="required" >
+                <option value="0">good</option>
+                <option value="1">poor</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+
+            <label for="appet">Do you have Coronary Artery Disease</label>
+            <select class="form-control" id="Coronary Artery Disease" name="Coronary Artery Disease" required="required" >
+                <option value="0">no</option>
+                <option value="1">yes</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="appet">Do you have Anemia </label>
+            <select class="form-control" id="Anemia" name="Anemia" required="required" >
+                <option value="0">no</option>
+                <option value="1">yes</option>
+            </select>
+        </div>
+        <div class="bala col-md-offset-4">
+            <label for="appet">Do you have Pedal Edema</label>
+            <select class="form-control" id="Pedal Edema" name="Pedal Edema" required="required" >
+                <option value="0">no</option>
+                <option value="1">yes</option>
+            </select>
+        </div>
+
+    </div>
+
+   
+    <br>
+    <br>
+    <div class="bala bbn text-center">
+         <button type="submit" class="btn btn-success" value="submit">PREDICT DISEASE</button>
+    </div>
+   
+    
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

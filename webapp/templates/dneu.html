@@ -1,0 +1,53 @@
+{% extends "common.html" %}
+{% block page %}
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 style="margin: auto;width: 80%; text-align: center; margin-top: 20px;  text-transform: uppercase">Give the following details:</h3>
+
+  <form action="{{ url_for('pred.inputfile')}}" method="POST" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto">
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="bala">
+          <h5>Upload the chest X Ray image : </h5>
+        </div>
+        <div class="bala">
+          <div class="mb-3 pt-5">
+            <input class="form-control" name="file" type="file" id="formFile" onchange="preview_image(event)" required="required">
+          </div>
+        </div>
+    </div> 
+    <img id="output-image" class="rounded mx-auto d-block" src="{{ url_for('pred.outfile', filename=file_name)}}" onerror="this.src='./static/photos/upload.png'" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 10px"  />
+    <p style="font-style: italic">{{ file_name }}</p>
+    <br>
+    <br>
+    <div class="bala bbn text-center">
+       <button type="submit" class="btn btn-success" value="submit">PREDICT DISEASE</button>
+    </div>
+  </form>
+  <br>
+  <br>
+  <br>
+    
+    
+   
+  
+
+
+  <script type="text/javascript">
+    function preview_image(event) {
+      var rread = new FileReader();
+      rread.onload = function () {
+        var oout = document.getElementById('output-image')
+        oout.src = read.result;
+      }
+      rread.readAsDataURL(event.target.files[0]);
+      }
+    </script>
+  <hr>
+
+{% endblock %}
+

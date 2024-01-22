@@ -1,0 +1,93 @@
+{% extends "common.html" %}
+{% block page %}
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="container">
+  <form action="/putinmodel" method="POST">
+      <h3>Give the following details:</h3>
+    <hr>
+
+    <div class="row">
+        <div class="bala col-md-offset-4">
+          <label for="age">Your Age</label>
+          <input class="form-control" type="number" min="0" required="required" name="age">
+        </div>
+        <div class="bala col-md-offset-4 ">
+          <label for="avg_glucose_level">Average Glucose Level</label>
+          <input class="form-control" type="number" min="0" step="any" id="avg_glucose_level" name="avg_glucose_level" required="required" >
+        </div>
+          
+        <div class="bala col-md-offset-4">
+          <label for="hypertension">Hypertension</label>
+          <select class="form-control" id="hypertension" name = "hypertension" required="required" placeholder="(yes/no)">
+            <option value="1">yes</option>
+            <option value="0">no</option>
+          </select>
+        </div>
+        <div class="bala col-md-offset-4">
+          <label for="heart_disease">Do you have Heart Disease</label>
+          <select class="form-control" id="heart_disease" name = "heart_disease" required="required" >
+            <option value="1">yes</option>
+            <option value="0">no</option>
+          </select>
+        </div>
+        <div class="bala col-md-offset-4">
+          <label for="gender">Gender</label>
+          <select class="form-control" id="Gender" name = "Gender" required="required">
+            <option value="1">male</option>
+            <option value="0">female</option>
+          </select>
+        </div>
+        <div class="bala col-md-offset-4">
+          <label for="ever_married">Married or was married before</label>
+          <select class="form-control" id="ever_married" name = "ever_married" required="required" >
+            <option value="1">yes</option>
+            <option value="0">no</option>
+          </select>
+        </div>
+        <div class="bala col-md-offset-4">
+          <label for="work_type">work type of you job</label>
+          <select class="form-control" id="work_type" name = "work_type" required="required" >
+            <option value="0">Private</option>
+            <option value="1">Self employed</option>
+            <option value="2">Governement job</option>
+            <option value="3">take care of the children</option>
+            <option value="4">never worked</option>
+          </select>
+        </div>
+        <div class="bala col-md-offset-4">
+          <label for="Residence_type">Where do you stay</label>
+          <select class="form-control" id="Residence_type" name = "Residence_type" required="required" placeholder="rural/urban" >
+            <option value="1">Urban</option>
+            <option value="0">Rural</option>
+          </select>
+        </div>
+        <div class="bala col-md-offset-4">
+          <label for="smoking_status">do you smoke</label>
+          <select class="form-control" id="Smoking_status" name = "Smoking_status" required="required">
+            <option value="0">never smoked</option>
+            <option value="1">Sometimes</option>
+            <option value="2">formerly smoked</option>
+            <option value="3">smokes</option>
+          </select>
+        </div>
+    </div>
+
+   
+    <br>
+    <br>
+    <br>
+    <div class="bala bbn text-center">
+         <button type="submit" class="btn btn-success" value="submit">PREDICT DISEASE</button>
+    </div>
+   
+    
+</form>
+</div>
+ <br>
+  <br>
+  <br>
+
+{% endblock %}

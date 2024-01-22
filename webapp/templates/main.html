@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>HealthPredictor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./static/styling/basics.css">
+
+	<link rel="stylesheet" href="./static/styling/movements.css">
+
+	<link rel="stylesheet" href="./static/styling/texts.css">
+
+	<link rel="stylesheet" href="./static/styling/popping.css">
+
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet" type='text/css'>
+
+	<link rel="stylesheet" href="./static/styling/style.css">
+
+
+</head>
+{% block content %}
+
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+	
+	<div class="navbar navbar-fixed-top navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+				</button>
+				<a href="/" class="navbar-brand"><img src="./static/photos/topic.png" class="img-responsive"
+						alt="logo"></a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/" class="smoothScroll">HOME</a></li>
+					<li><a href="#service" class="smoothScroll">ABOUT</a></li>
+					<li><a href="#portfolio" class="smoothScroll">DISEASES PREDICTION</a></li>
+					
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<section id="home" class="text-center">
+		<div class="templatemo_headerimage">
+			<div class="flexslider">
+				<ul >
+					<li>
+						<img src="./static/photos/mainp.jpg" alt="">
+						<div class="slider-caption">
+							<div class="templatemo_homewrapper">
+								<h1 class="wow fadeInDown" data-wow-delay="2000" style="color: #FF7800; text-shadow: 2px 2px 5px #693700; border-width: 3px; ">Smart Health Predictor System</h1>
+								<h2 class="wow fadeInDown" data-wow-delay="2000" style="color: #FF7800; text-shadow: 2px 2px 5px #693700; border-width: 3px; ">
+									<span>Helps to find your disease with the symptoms you have.</span>
+								</h2>
+								<a href="#service" class="smoothScroll btn btn-default wow fadeInDown"
+									data-wow-delay="2000">See Features</a>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+	<div id="service">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 class="wow bounce">Features</h2>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<div >
+				<div >
+					<div class="media">
+						
+						</div>
+						<div class="media-body wow fadeIn">
+							
+							<p>This project on developing a smart health predictor system is aimed to 
+							predict the probable diseases of a patient based on the inputs of the
+							symptoms given. This system is expected to predict the diseases based 
+							on the past datasets provided for the diseases and predict the most 
+							likely disease for the given symptoms based on the previous data.</p>
+							<p>
+								A smart health prediction system is a system that may precisely identify probable illnesses based on patient symptoms and deliver prompt probable disease with the aid of machine learning algorithms like decision tree classifier, random forest classifier, and others.
+								With the help of the decision tree classifier method, a hierarchical tree-like structure can be created, with each node standing for a feature and each branch for a decision based on that feature. The algorithm discovers the ideal tree structure to reduce the training data set's classification error. Using the generated decision tree and a patient's list of symptoms, the disease can then be predicted.
+								</p><p>
+	This system will have two functional modules- the backend and the frontend. The backend will be responsible for training pre-built machine learning algorithms with the some past data about the illness of the patients and the related symptoms. The testing dataset will be used to check if the system is precisely able to predict the diseases with great accuracy. Two pre-defined algorithms will be used to predict the illness and the accuracy of both can be compared:
+</p><p>
+	With the help of the decision tree classifier method, a hierarchical tree-like structure can be created, with each node standing for a feature and each branch for a decision based on that feature. The algorithm discovers the ideal tree structure to reduce the training data set's classification error. Using the generated decision tree and a patient's list of symptoms, the disease can then be predicted.
+</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	
+	<div id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 class="wow bounce">Our models</h2>
+					<br>
+					<br>
+					<div class="iso-section wow fadeIn" data-wow-delay="0.6s">
+
+						<div class="iso-box-section">
+							<div class="iso-box-wrapper col4-iso-box portfolio-container">
+
+								<div class="iso-box graphic photoshop wallpaper bala col-sm-6 col-xs-12">
+									<div class="portfolio-thumb">
+										<img src="./static/photos/dliv.jpg" class="fluid-img"
+											 alt="portfolio img">
+										<div class="portfolio-overlay">
+											<a href="/dlivform" class="smoothScroll fa fa-search wow fadeInDown" data-wow-delay="2000"></a>
+											<h4>Liver disease</h4>
+										</div>
+										
+										
+									</div>
+									</div>
+								</div>
+
+								<div class="iso-box graphic wallpaper bala col-sm-6 col-xs-12">
+									<div class="portfolio-thumb">
+										<img src="./static/photos/dpneu.jpg" class="fluid-img"
+											alt="portfolio img">
+										<div class="portfolio-overlay">
+
+											<a href="/dneuform" class="smoothScroll fa fa-search wow fadeInDown" data-wow-delay="2000"></a>
+											<h4>Pneumonia</h4>
+											
+										</div>
+									</div>
+								</div>
+
+								<div class="iso-box wallpaper bala col-sm-6 col-xs-12">
+									<div class="portfolio-thumb">
+										<img src="./static/photos/dkid.jpg" class="fluid-img"
+											alt="portfolio img">
+										<div class="portfolio-overlay">
+
+											<a href="/dkidform" class="smoothScroll fa fa-search wow fadeInDown" data-wow-delay="2000"></a>
+											<h4>Kidney disease</h4>
+											
+										</div>
+									</div>
+								</div>
+
+								<div class="iso-box graphic bala col-sm-6 col-xs-12">
+									<div class="portfolio-thumb">
+										<img src="./static/photos/ddia.jpg" class="fluid-img"
+											alt="portfolio img">
+										<div class="portfolio-overlay">
+
+
+											<a href="/ddiaform" class="smoothScroll fa fa-search wow fadeInDown" data-wow-delay="2000"></a>
+											<h4>Diabetes</h4>
+											
+										</div>
+									</div>
+								</div>
+
+								<div class="iso-box wallpaper bala col-sm-6 col-xs-12">
+									<div class="portfolio-thumb">
+										<img src="./static/photos/dstro.jpg" class="fluid-img"
+											alt="portfolio img">
+										<div class="portfolio-overlay">
+											<a href="/dstroform" class="smoothScroll fa fa-search wow fadeInDown" data-wow-delay="2000"></a>
+											
+											<h4>Stroke disease</h4>
+											
+										</div>
+									</div>
+								</div>
+
+								<div class="iso-box graphic photoshop bala col-sm-6 col-xs-12">
+									<div class="portfolio-thumb">
+										<img src="./static/photos/dhea.jpg" class="fluid-img"
+											alt="portfolio img">
+										<div class="portfolio-overlay">
+
+											<a href="/dheaform" class="smoothScroll fa fa-search wow fadeInDown" data-wow-delay="2000"></a>
+											<h4>Heart disease</h4>
+											
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+	{% endblock %}
+
+
+
+	<script src="./static/javascripts/basic.js"></script>
+	<script src="./static/javascripts/query.js"></script>
+
+	
+	<script src="./static/javascripts/loadimagesjs"></script>
+	<script src="./static/javascripts/move.js"></script>
+	
+	
+	<script src="./static/javascripts/scroll.js"></script>
+	<script src="./static/javascripts/bmove.js"></script>
+
+	
+	<script src="./static/javascripts/popping.js"></script>	
+	<script src="./static/javascripts/sliding.js"></script>
+
+	
+	
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+{% extends "common.html" %}
+{% block page %}
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h2 class="pt-10 text-center">{{page}} Disease results:</h2>
+  
+
+  <div style="width: 90%; margin: auto; text-align: center">
+  	{% if pred == 0 %}
+      <img src="./static/photos/negative.jpg" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 20px">
+      <br>
+      <br>
+      <p style="font-style: italic; font-size: 20px">There is no symptoms of {{page}} disease. So, there is nothing to worry</p>
+      <br>
+      <br>
+       <div class="prediction text-center">
+		    <a href="/" class="smoothScroll btn btn-success wow fadeInDown" data-wow-delay="2000">Back Home</a>
+	  	</div>
+      <br>
+      <br>
+
+    {% elif pred == 1 %}
+      <img src="./static/photos/positive.jpg" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 20px">
+      <br>
+      <br>
+      <p style="font-style: italic; font-size: 20px">There is risk of getting {{page}} disease. Visit healthcare for more details.</p>
+      <br>
+      <br>
+
+
+      <div class="pred text-center">
+		    <a href="/" class="smoothScroll btn btn-success wow fadeInDown" data-wow-delay="2000">GO BACK</a>
+	  	</div>
+
+
+     {% endif %}
+  </div>
+  <br>
+  <br>
+  <br>
+
+    
+{% endblock %}
